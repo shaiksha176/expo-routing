@@ -1,12 +1,5 @@
+import { TabBarIcon } from "@/app/(tabs)/_layout";
 import { Tabs } from "expo-router";
-import FontAwesome from "@expo/vector-icons/FontAwesome";
-
-export function TabBarIcon(props: {
-  name: React.ComponentProps<typeof FontAwesome>["name"];
-  color: string;
-}) {
-  return <FontAwesome size={28} style={{ marginBottom: -3 }} {...props} />;
-}
 
 export default function TabLayout() {
   return (
@@ -23,19 +16,22 @@ export default function TabLayout() {
       }}
     >
       <Tabs.Screen
-        name="welcome"
+        name="invoice"
         options={{
-          title: "Home Tab",
-          headerTitle: "welcome",
-          headerShown: false,
+          title: "Invoice Tab",
+          //   headerTitle: "welcome",
+          headerShown: true,
           tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
+
           // href: null,
         }}
       />
       <Tabs.Screen
-        name="basket/index"
+        name="shipment"
         options={{
-          title: "Tab Two",
+          title: "shipment tab",
+          headerShown: true,
+
           tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
         }}
       />

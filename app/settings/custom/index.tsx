@@ -6,7 +6,7 @@ import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
 const CustomSettings = () => {
   return (
     <View>
-      <Stack.Screen
+      {/* <Stack.Screen
         options={{
           title: "Custom Setting",
           headerStyle: {
@@ -25,9 +25,10 @@ const CustomSettings = () => {
           //     );
           //   },
         }}
-      />
+      /> */}
       <Text>Custom Text</Text>
-      <Link href="/(tabs)/home/">Go to Home Tab</Link>
+
+      <Link href="/(tabs)/welcome">Go to welcome Tab</Link>
     </View>
   );
 };

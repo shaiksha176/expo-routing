@@ -5,12 +5,13 @@ export default function HomeLayout() {
     <Stack
       screenOptions={{
         headerStyle: {
-          backgroundColor: "pink",
+          backgroundColor: "black",
         },
         headerTintColor: "white",
+        // headerShown: false,
       }}
     >
-      <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+      {/* <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
       <Stack.Screen
         name="home/index"
         options={{
@@ -22,7 +23,7 @@ export default function HomeLayout() {
         options={{
           headerShown: false,
         }}
-      />
+      /> */}
       {/* <Stack.Screen
         name="settings/custom/index"
         options={{
@@ -30,9 +31,15 @@ export default function HomeLayout() {
         }}
       /> */}
       <Stack.Screen
-        name="orders/(tabs)/shipment"
+        name="cart/index"
         options={{
-          headerTitle: "Invoice",
+          headerTitle: "Custom",
+        }}
+      />
+      <Stack.Screen
+        name="orders/(tabs)"
+        options={{
+          headerTitle: "Custom",
         }}
       />
     </Stack>
